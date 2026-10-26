@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Offtap: NFC App Blocker</title>
+<meta name="description" content="Offtap blocks the apps you choose until you tap an NFC sticker, or scan a printed code, that you left somewhere else. No account. No ads.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2221 21 66 66%22%3E%3Crect x=%220%22 y=%220%22 width=%22108%22 height=%22108%22 fill=%22%23D99A2B%22/%3E%3Cpath d=%22M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z%22 fill=%22%23F7EEDB%22/%3E%3C/svg%3E%0A">
+<style>
+:root{color-scheme:light dark;--bg:#F6F3EC;--card:#FFFDF9;--ink:#191A26;--muted:#575566;--line:#E2DCD0;--accent:#30378A;--accentc:#E5E5F4;--ochre:#D99A2B}
+@media (prefers-color-scheme:dark){:root{--bg:#111117;--card:#1A1A21;--ink:#EFEBE2;--muted:#AEAAB6;--line:#30303A;--accent:#B8BCF4;--accentc:#2E3373;--ochre:#E3A841}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px 72px}
+header.top{padding:8px 0 28px}
+header.top a{color:var(--ink);text-decoration:none;font-weight:600;font-size:20px;display:inline-flex;align-items:center;gap:12px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ochre);margin-left:3px}
+.mark.dark{display:none}
+@media (prefers-color-scheme:dark){.mark.light{display:none}.mark.dark{display:inline}}
+h1{font-size:clamp(30px,7vw,44px);line-height:1.1;letter-spacing:-.02em;margin:8px 0 14px;font-weight:650}
+h2{font-size:22px;line-height:1.25;margin:40px 0 10px;font-weight:600}
+p{margin:0 0 14px}
+.lead{font-size:19px;color:var(--muted)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:16px 0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+ul,ol{padding-left:22px;margin:0 0 14px}
+li{margin:0 0 6px}
+dl{margin:0}
+dt{font-weight:600;margin-top:16px}
+dd{margin:2px 0 0;color:var(--muted)}
+.meta{color:var(--muted);font-size:15px}
+.pill{display:inline-block;background:var(--accentc);color:var(--ink);border-radius:999px;padding:2px 12px;font-size:14px;font-weight:600}
+footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer a{margin-right:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a href="./"><svg class="mark light" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z" fill="#1B1F4E"/><path d="M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z" fill="#1B1F4E"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#D99A2B"/></svg><svg class="mark dark" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M64.84,65.95L65.11,68.08L65.06,69.62L64.73,71.1L64.14,72.48L63.32,73.73L62.28,74.81L61.06,75.69L59.69,76.35L58.35,76.71L52.35,77.56L46.32,78.41L40.27,79.26L38.57,79.44L37.05,79.33L35.58,78.95L34.22,78.31L33,77.45L31.96,76.37L31.12,75.12L30.52,73.72L29.55,67.69L28.71,61.75L27.87,55.77L27.55,53.36L27.57,51.82L27.87,50.33L28.43,48.94L29.23,47.67L30.25,46.57L31.45,45.67L32.81,44.99L34.15,44.6L40.17,43.74L43.27,43.3L43.09,45.88L43.2,48.22L43.58,50.54L44.23,52.79L45.15,54.95L46.32,56.99L47.72,58.88L49.33,60.58L51.14,62.09L53.11,63.36L55.21,64.4L57.43,65.18L59.72,65.69L62.05,65.93L64.4,65.89L64.81,65.85Z" fill="#EFEBE2"/><path d="M46.19,40.6L47.12,38.33L48.36,36.21L49.89,34.29L51.67,32.6L53.66,31.17L55.84,30.03L58.15,29.21L60.56,28.71L63.01,28.56L65.45,28.75L67.85,29.27L70.15,30.13L72.31,31.3L74.29,32.75L76.04,34.47L77.54,36.42L78.75,38.55L79.65,40.83L80.23,43.22L80.47,45.66L80.37,48.11L79.93,50.53L79.15,52.86L78.06,55.06L76.67,57.08L75.02,58.89L73.13,60.46L71.03,61.74L68.79,62.73L66.78,63.31L65.85,57.34L65.01,51.37L64.55,48.16L64.16,46.71L63.49,45.18L62.6,43.79L61.5,42.55L60.22,41.51L58.8,40.68L57.26,40.08L55.63,39.73L54.13,39.64L48.17,40.39L46.18,40.67Z" fill="#EFEBE2"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#E3A841"/></svg><span>Offtap<i class="dot"></i></span></a></header>
+<main>
+<p><span class="pill">Android</span></p>
+<h1>Tap to unlock. Honest by design.</h1>
+<p class="lead">Offtap blocks the apps you choose until you tap an NFC sticker that you left somewhere else, or scan a printed code. Standing up and walking to the sticker is the feature.</p>
+<p class="meta">Offtap is not on Google Play yet. This page will link to the store listing when it is.</p>
+
+<h2>How it works</h2>
+<ol>
+<li>Pick the apps you want out of reach.</li>
+<li>Pair an NFC sticker, or make a QR code to print.</li>
+<li>Press the button to start. Your chosen apps are covered by a block screen.</li>
+<li>Leave the sticker or the printed code in another room. Tap or scan it to get your apps back.</li>
+</ol>
+
+<h2>What you get</h2>
+<ul>
+<li>Profiles of apps, with a timed option when you want a session to end by itself.</li>
+<li>A way out that is always there: an emergency unlock after a short wait, and a longer wait when you have used your monthly unlocks.</li>
+<li>A warning when Android stops blocking, with one tap to turn it back on.</li>
+<li>Locking and unlocking never sit behind a paywall.</li>
+</ul>
+
+<h2>Honest limits</h2>
+<div class="card">
+<p>Offtap adds friction. It is not a lock you cannot undo, and you can uninstall it at any time.</p>
+<ul>
+<li>It blocks opening apps. It does not block websites or notifications.</li>
+<li>A printed QR code is easier to get around than a sticker: anyone with a photo of it can unlock.</li>
+<li>Android or your phone maker can stop background apps. If that happens, Offtap tells you.</li>
+<li>Offtap is a productivity tool, not a medical product. Do not rely on it for anything urgent.</li>
+</ul>
+</div>
+
+<h2>Your data</h2>
+<p>Offtap has no account and no servers, and it never uploads the apps you block. There are no ads and no analytics. Read the <a href="privacy/">privacy policy</a> for exactly what is stored on your phone and why each permission is needed.</p>
+
+<h2>Requirements</h2>
+<p>Android 8.0 or newer, and either an NFC sticker (NTAG213, NTAG215 or NTAG216) on a phone with NFC, or a camera to scan a printed code. Offtap is for people aged 18 and over.</p>
+
+<h2>Contact</h2>
+<p>Questions or problems: <a href="mailto:yogirana5557@gmail.com">yogirana5557@gmail.com</a></p>
+</main>
+<footer>
+<a href="./">Home</a><a href="privacy/">Privacy policy</a><a href="mailto:yogirana5557@gmail.com">Contact</a>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Offtap privacy policy</title>
+<meta name="description" content="What the Offtap Android app stores on your phone, what it never does, and why each permission is needed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2221 21 66 66%22%3E%3Crect x=%220%22 y=%220%22 width=%22108%22 height=%22108%22 fill=%22%23D99A2B%22/%3E%3Cpath d=%22M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z%22 fill=%22%23F7EEDB%22/%3E%3C/svg%3E%0A">
+<style>
+:root{color-scheme:light dark;--bg:#F6F3EC;--card:#FFFDF9;--ink:#191A26;--muted:#575566;--line:#E2DCD0;--accent:#30378A;--accentc:#E5E5F4;--ochre:#D99A2B}
+@media (prefers-color-scheme:dark){:root{--bg:#111117;--card:#1A1A21;--ink:#EFEBE2;--muted:#AEAAB6;--line:#30303A;--accent:#B8BCF4;--accentc:#2E3373;--ochre:#E3A841}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px 72px}
+header.top{padding:8px 0 28px}
+header.top a{color:var(--ink);text-decoration:none;font-weight:600;font-size:20px;display:inline-flex;align-items:center;gap:12px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ochre);margin-left:3px}
+.mark.dark{display:none}
+@media (prefers-color-scheme:dark){.mark.light{display:none}.mark.dark{display:inline}}
+h1{font-size:clamp(30px,7vw,44px);line-height:1.1;letter-spacing:-.02em;margin:8px 0 14px;font-weight:650}
+h2{font-size:22px;line-height:1.25;margin:40px 0 10px;font-weight:600}
+p{margin:0 0 14px}
+.lead{font-size:19px;color:var(--muted)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:16px 0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+ul,ol{padding-left:22px;margin:0 0 14px}
+li{margin:0 0 6px}
+dl{margin:0}
+dt{font-weight:600;margin-top:16px}
+dd{margin:2px 0 0;color:var(--muted)}
+.meta{color:var(--muted);font-size:15px}
+.pill{display:inline-block;background:var(--accentc);color:var(--ink);border-radius:999px;padding:2px 12px;font-size:14px;font-weight:600}
+footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer a{margin-right:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a href="../"><svg class="mark light" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z" fill="#1B1F4E"/><path d="M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z" fill="#1B1F4E"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#D99A2B"/></svg><svg class="mark dark" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M64.84,65.95L65.11,68.08L65.06,69.62L64.73,71.1L64.14,72.48L63.32,73.73L62.28,74.81L61.06,75.69L59.69,76.35L58.35,76.71L52.35,77.56L46.32,78.41L40.27,79.26L38.57,79.44L37.05,79.33L35.58,78.95L34.22,78.31L33,77.45L31.96,76.37L31.12,75.12L30.52,73.72L29.55,67.69L28.71,61.75L27.87,55.77L27.55,53.36L27.57,51.82L27.87,50.33L28.43,48.94L29.23,47.67L30.25,46.57L31.45,45.67L32.81,44.99L34.15,44.6L40.17,43.74L43.27,43.3L43.09,45.88L43.2,48.22L43.58,50.54L44.23,52.79L45.15,54.95L46.32,56.99L47.72,58.88L49.33,60.58L51.14,62.09L53.11,63.36L55.21,64.4L57.43,65.18L59.72,65.69L62.05,65.93L64.4,65.89L64.81,65.85Z" fill="#EFEBE2"/><path d="M46.19,40.6L47.12,38.33L48.36,36.21L49.89,34.29L51.67,32.6L53.66,31.17L55.84,30.03L58.15,29.21L60.56,28.71L63.01,28.56L65.45,28.75L67.85,29.27L70.15,30.13L72.31,31.3L74.29,32.75L76.04,34.47L77.54,36.42L78.75,38.55L79.65,40.83L80.23,43.22L80.47,45.66L80.37,48.11L79.93,50.53L79.15,52.86L78.06,55.06L76.67,57.08L75.02,58.89L73.13,60.46L71.03,61.74L68.79,62.73L66.78,63.31L65.85,57.34L65.01,51.37L64.55,48.16L64.16,46.71L63.49,45.18L62.6,43.79L61.5,42.55L60.22,41.51L58.8,40.68L57.26,40.08L55.63,39.73L54.13,39.64L48.17,40.39L46.18,40.67Z" fill="#EFEBE2"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#E3A841"/></svg><span>Offtap<i class="dot"></i></span></a></header>
+<main>
+<h1>Privacy policy</h1>
+<p class="meta">Offtap for Android. Effective 27 October 2026.</p>
+
+<div class="card">
+<p><strong>In short.</strong> Offtap does not collect your personal data. Everything it keeps stays on your phone. There is no account, no advertising, no analytics and no crash-reporting service in the app. We run no server that your data could be sent to.</p>
+</div>
+
+<h2>What Offtap keeps on your phone</h2>
+<p>These are stored in Offtap's private storage on your device so the app can work. They are not sent to the developer or anyone else.</p>
+<ul>
+<li>The apps you put in your profiles, and the names of your profiles.</li>
+<li>Your keys: the name you gave each NFC sticker or printed code, the sticker's ID, and for a printed code only a one-way hash of its secret (not the code image).</li>
+<li>When you started and ended a session, and how it ended (for example by tapping your sticker or using an emergency unlock).</li>
+<li>When you used an emergency unlock, so the monthly allowance can be counted.</li>
+<li>Your settings and your answers to the first-run questions.</li>
+<li>Schedules you set, if you use them.</li>
+<li>Whether you have Offtap Pro. Purchases are handled by Google Play (see below); Offtap stores only that status, on this phone.</li>
+</ul>
+<p>Offtap does not keep a list of the apps you open.</p>
+
+<h2>What leaves your phone</h2>
+<p>Nothing is sent to us. Offtap has no account system and no server. It does not use advertising or analytics services and does not include a crash-reporting service. The list of apps you block and everything above never leave the device through Offtap.</p>
+
+<h2>Purchases</h2>
+<p>If you buy Offtap Pro, the purchase is processed by Google Play. Google handles your payment details and receipts under its own terms and privacy policy; Offtap does not receive your card or account details. Offtap asks Google Play whether you own Pro and keeps only the answer, on your phone. It does not send purchase information anywhere.</p>
+
+<h2>Google Play and Android</h2>
+<p>If you install Offtap from Google Play, Google may collect information about the installation under its own policies. If you have chosen to share usage and diagnostic data with Google, Google may show the developer summary statistics such as crash and performance rates. Offtap itself has no crash reporter and receives nothing else.</p>
+
+<h2>Permissions and why Offtap asks for them</h2>
+<p>Offtap explains each of these inside the app before it sends you to the Android screen. You can refuse any of them; some features then do not work.</p>
+<dl>
+<dt>Usage access</dt>
+<dd>Lets Offtap see which app is in front, so it can cover the apps you blocked. It looks only while a session is active. It stays on your phone. Android words this permission broadly (it also lets apps see screen time); Offtap does not keep that information.</dd>
+<dt>Display over other apps</dt>
+<dd>Lets Offtap show its own block screen on top of a blocked app. It draws nothing over other apps when no session is active.</dd>
+<dt>Notifications</dt>
+<dd>Shows a quiet notification while a session is active, and tells you if Android stops blocking.</dd>
+<dt>Foreground service</dt>
+<dd>Keeps blocking running while a session you started is active. It runs only during a session, shows its notification, and stops when the session ends.</dd>
+<dt>Run at startup</dt>
+<dd>Restores an active session after your phone restarts.</dd>
+<dt>Alarms and reminders (optional)</dt>
+<dd>Lets Offtap restart blocking and start schedules at the exact time. Without it they may be a little late.</dd>
+<dt>NFC (optional)</dt>
+<dd>Reads the ID of your sticker to pair it and to unlock. Offtap may write a small Offtap record to a sticker so the sticker can open the app; it asks before replacing anything already on it, and the record contains no personal data. Offtap installs on phones without NFC.</dd>
+<dt>Camera (optional)</dt>
+<dd>Used only to scan your own printed Offtap code. Camera images are processed on the phone to read the code; they are not saved and not sent anywhere. Offtap asks only when you choose to scan.</dd>
+<dt>The list of apps you can open</dt>
+<dd>Offtap can see which apps have a launcher icon so you can pick the ones to block, and so it can show an app's name on the block screen. This list stays on your phone.</dd>
+<dt>Battery settings</dt>
+<dd>Offtap can open Android's battery settings list so you can choose "Unrestricted" for Offtap. It does not request the special battery-exemption permission.</dd>
+<dt>Google Play billing</dt>
+<dd>Lets Offtap ask Google Play about purchases.</dd>
+</dl>
+<p>Android libraries used by Offtap also add two ordinary permissions: keeping the phone awake briefly for background work, and checking whether the phone is online. Offtap does not use them to send your data.</p>
+
+<h2>Printed codes</h2>
+<p>When you make a printed code, Offtap shows it on screen and lets you print it or save it as an image with Android's own print and file screens. The saved image stays where you put it; Offtap does not upload it. If you share or copy the image, anyone who has it can unlock your apps, so keep no copy on the phone.</p>
+
+<h2>Backups</h2>
+<p>Android cloud backup and device-to-device transfer are turned off for Offtap, so its data is not copied to your Google account. Moving to a new phone means setting Offtap up again.</p>
+
+<h2>Deleting your data</h2>
+<p>Uninstall Offtap, or open Android Settings, Apps, Offtap, Storage, and choose Clear data. Either removes everything Offtap stored, including your paired keys and any active session. We hold no copy, so there is nothing for us to look up, change or delete on our side.</p>
+
+<h2>Age</h2>
+<p>Offtap is intended for people aged 18 and over.</p>
+
+<h2>Changes to this policy</h2>
+<p>If a future version of Offtap changes how it handles data, this page will be updated before that version is released and the effective date above will change.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:yogirana5557@gmail.com">yogirana5557@gmail.com</a></p>
+</main>
+<footer>
+<a href="../">Home</a><a href="./">Privacy policy</a><a href="mailto:yogirana5557@gmail.com">Contact</a>
+</footer>
+</div>
+</body>
+</html>
