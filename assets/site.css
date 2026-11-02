@@ -212,3 +212,5 @@ summary:hover{background:var(--sunk)}
 .nf .code{font-size:.875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 @media print{.site-header,.skip,.stage,.gallery-wrap{display:none}body{background:#fff;color:#000}}
+
+.play{display:inline-flex;align-items:center;line-height:0;border-radius:10px}.play img{display:block;height:auto;max-width:100%}.play.hdr img{height:44px;width:auto;margin:-4px 0}.play.hero img,.play.cta img{height:64px;width:auto;margin:-6px -8px -6px -8px}@media (max-width:30rem){.play.hdr img{height:40px}.play.hero img,.play.cta img{height:60px}}.play:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.night .play:focus-visible{outline-color:var(--night-accent)}
