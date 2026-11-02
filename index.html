@@ -4,89 +4,176 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Offtap: NFC App Blocker</title>
+<meta name="theme-color" content="#F6F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111117" media="(prefers-color-scheme: dark)">
+<title>Offtap: NFC App Blocker for Android</title>
 <meta name="description" content="Offtap blocks the apps you choose until you tap an NFC sticker, or scan a printed code, that you left somewhere else. No account. No ads.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2221 21 66 66%22%3E%3Crect x=%220%22 y=%220%22 width=%22108%22 height=%22108%22 fill=%22%23D99A2B%22/%3E%3Cpath d=%22M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z%22 fill=%22%231B1F4E%22/%3E%3Cpath d=%22M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z%22 fill=%22%23F7EEDB%22/%3E%3C/svg%3E%0A">
-<style>
-:root{color-scheme:light dark;--bg:#F6F3EC;--card:#FFFDF9;--ink:#191A26;--muted:#575566;--line:#E2DCD0;--accent:#30378A;--accentc:#E5E5F4;--ochre:#D99A2B}
-@media (prefers-color-scheme:dark){:root{--bg:#111117;--card:#1A1A21;--ink:#EFEBE2;--muted:#AEAAB6;--line:#30303A;--accent:#B8BCF4;--accentc:#2E3373;--ochre:#E3A841}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-.wrap{max-width:720px;margin:0 auto;padding:24px 20px 72px}
-header.top{padding:8px 0 28px}
-header.top a{color:var(--ink);text-decoration:none;font-weight:600;font-size:20px;display:inline-flex;align-items:center;gap:12px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ochre);margin-left:3px}
-.mark.dark{display:none}
-@media (prefers-color-scheme:dark){.mark.light{display:none}.mark.dark{display:inline}}
-h1{font-size:clamp(30px,7vw,44px);line-height:1.1;letter-spacing:-.02em;margin:8px 0 14px;font-weight:650}
-h2{font-size:22px;line-height:1.25;margin:40px 0 10px;font-weight:600}
-p{margin:0 0 14px}
-.lead{font-size:19px;color:var(--muted)}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:16px 0}
-.card p:last-child,.card ul:last-child{margin-bottom:0}
-ul,ol{padding-left:22px;margin:0 0 14px}
-li{margin:0 0 6px}
-dl{margin:0}
-dt{font-weight:600;margin-top:16px}
-dd{margin:2px 0 0;color:var(--muted)}
-.meta{color:var(--muted);font-size:15px}
-.pill{display:inline-block;background:var(--accentc);color:var(--ink);border-radius:999px;padding:2px 12px;font-size:14px;font-weight:600}
-footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
-footer a{margin-right:16px}
-</style>
+<link rel="canonical" href="https://yogirana5557.github.io/offtap-site/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Offtap">
+<meta property="og:title" content="Offtap: NFC App Blocker for Android">
+<meta property="og:description" content="Offtap blocks the apps you choose until you tap an NFC sticker, or scan a printed code, that you left somewhere else. No account. No ads.">
+<meta property="og:url" content="https://yogirana5557.github.io/offtap-site/">
+<meta property="og:image" content="https://yogirana5557.github.io/offtap-site/assets/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Offtap. Tap to unlock. Honest by design.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Offtap: NFC App Blocker for Android">
+<meta name="twitter:description" content="Offtap blocks the apps you choose until you tap an NFC sticker, or scan a printed code, that you left somewhere else. No account. No ads.">
+<meta name="twitter:image" content="https://yogirana5557.github.io/offtap-site/assets/og-image.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<div class="wrap">
-<header class="top"><a href="./"><svg class="mark light" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M34.65,44.51L53.1,41.92A8.28,8.28 0 0,1 62.45,48.97L65.04,67.42A8.28,8.28 0 0,1 58,76.77L39.55,79.36A8.28,8.28 0 0,1 30.2,72.32L27.6,53.87A8.28,8.28 0 0,1 34.65,44.51Z" fill="#1B1F4E"/><path d="M45.29,46.15A17.59,17.59 0 1,1 80.48,46.15A17.59,17.59 0 1,1 45.29,46.15Z" fill="#1B1F4E"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#D99A2B"/></svg><svg class="mark dark" viewBox="25.52 26.56 56.96 54.89" width="44" height="42" role="img" aria-label="Offtap mark"><path d="M64.84,65.95L65.11,68.08L65.06,69.62L64.73,71.1L64.14,72.48L63.32,73.73L62.28,74.81L61.06,75.69L59.69,76.35L58.35,76.71L52.35,77.56L46.32,78.41L40.27,79.26L38.57,79.44L37.05,79.33L35.58,78.95L34.22,78.31L33,77.45L31.96,76.37L31.12,75.12L30.52,73.72L29.55,67.69L28.71,61.75L27.87,55.77L27.55,53.36L27.57,51.82L27.87,50.33L28.43,48.94L29.23,47.67L30.25,46.57L31.45,45.67L32.81,44.99L34.15,44.6L40.17,43.74L43.27,43.3L43.09,45.88L43.2,48.22L43.58,50.54L44.23,52.79L45.15,54.95L46.32,56.99L47.72,58.88L49.33,60.58L51.14,62.09L53.11,63.36L55.21,64.4L57.43,65.18L59.72,65.69L62.05,65.93L64.4,65.89L64.81,65.85Z" fill="#EFEBE2"/><path d="M46.19,40.6L47.12,38.33L48.36,36.21L49.89,34.29L51.67,32.6L53.66,31.17L55.84,30.03L58.15,29.21L60.56,28.71L63.01,28.56L65.45,28.75L67.85,29.27L70.15,30.13L72.31,31.3L74.29,32.75L76.04,34.47L77.54,36.42L78.75,38.55L79.65,40.83L80.23,43.22L80.47,45.66L80.37,48.11L79.93,50.53L79.15,52.86L78.06,55.06L76.67,57.08L75.02,58.89L73.13,60.46L71.03,61.74L68.79,62.73L66.78,63.31L65.85,57.34L65.01,51.37L64.55,48.16L64.16,46.71L63.49,45.18L62.6,43.79L61.5,42.55L60.22,41.51L58.8,40.68L57.26,40.08L55.63,39.73L54.13,39.64L48.17,40.39L46.18,40.67Z" fill="#EFEBE2"/><path d="M45.58,42.98L51.63,42.13L53.76,41.86L55.3,41.91L56.78,42.24L58.16,42.82L59.41,43.65L60.49,44.68L61.37,45.9L62.03,47.28L62.39,48.62L63.24,54.62L64.09,60.64L64.5,63.59L62.88,63.75L60.43,63.58L58.03,63.07L55.73,62.23L53.56,61.07L51.57,59.63L49.81,57.93L48.3,55.99L47.07,53.87L46.15,51.59L45.56,49.21L45.3,46.77L45.38,44.31L45.56,43.1Z" fill="#E3A841"/></svg><span>Offtap<i class="dot"></i></span></a></header>
-<main>
-<p><span class="pill">Android</span></p>
-<h1>Tap to unlock. Honest by design.</h1>
-<p class="lead">Offtap blocks the apps you choose until you tap an NFC sticker that you left somewhere else, or scan a printed code. Standing up and walking to the sticker is the feature.</p>
-<p class="meta">Offtap is an Android app for phones running Android 8.0 or newer.</p>
-<p class="meta"><a href="https://play.google.com/store/apps/details?id=app.offtap">Get Offtap on Google Play</a></p>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="./" aria-label="Offtap home"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mark-dark.svg"><img src="assets/mark-light.svg" width="57" height="55" alt=""></picture><span>Offtap<i class="dot"></i></span></a>
+<nav class="nav" aria-label="Main">
+<a href="./#how">How it works</a><a href="./#faq">FAQ</a><a href="privacy/">Privacy</a>
+</nav>
+<a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=app.offtap"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></svg><span class="long">Get it on Google Play</span><span class="short">Google Play</span></a>
+</div></header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6M3 3l18 18"/></g></symbol><symbol id="i-ads" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7.5 15l2.2-6 2.2 6M8.2 13h3M15 9v6M3 3l18 18"/></g></symbol><symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-9M12 20V5M19 20v-6M3 3l18 18"/></g></symbol><symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="3"/><path d="M10.5 18h3"/></g></symbol><symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0M3 3l18 18"/><circle cx="12" cy="19.5" r=".6" fill="currentColor"/></g></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.5-9A6 6 0 0 1 18 9.5 4 4 0 0 1 17.5 18Z"/><path d="M3 3l18 18"/></g></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol><symbol id="i-unlock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 7.4-2"/></g></symbol><symbol id="i-trash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></g></symbol><symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></g></symbol></defs></svg>
+<main id="main">
 
-<h2>How it works</h2>
-<ol>
-<li>Pick the apps you want out of reach.</li>
-<li>Pair an NFC sticker, or make a QR code to print.</li>
-<li>Press the button to start. Your chosen apps are covered by a block screen.</li>
-<li>Leave the sticker or the printed code in another room. Tap or scan it to get your apps back.</li>
+<section class="hero" aria-labelledby="h1">
+<div class="wrap">
+<div>
+<span class="pill">Android</span>
+<h1 id="h1">Tap to unlock. Honest by design.</h1>
+<p class="lead">Offtap blocks the apps you choose until you tap an NFC sticker you left somewhere else, or scan a printed code. Standing up and walking to the sticker is the feature.</p>
+<div class="cta-row">
+<a class="btn" href="https://play.google.com/store/apps/details?id=app.offtap"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></svg>Get it on Google Play</a>
+<a class="btn btn-ghost" href="#how">How it works</a>
+</div>
+<p class="proof">Physical friction, zero data.</p>
+<p class="fine">For Android 8.0 or newer, with an NFC sticker or a camera for a printed code.</p>
+</div>
+<div class="stage">
+<span class="disc" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="ring r1" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
+<div class="phone big"><img src="assets/app-01.webp" width="540" height="1170" alt="The moment of unlocking in Offtap: a cream circle grows over the indigo block screen, which shows the time passed and the tag to walk to." fetchpriority="high" decoding="async"></div>
+</div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<div class="section-head"><span class="eyebrow">How it works</span><h2 id="how-h">Four steps. One small walk.</h2><p>Pick your apps, start a session and put your phone down. To get the apps back, you walk to your tag and tap it.</p></div>
+<ol class="steps">
+<li class="step"><span class="n" aria-hidden="true"></span><div class="copy"><h3>Pick your apps</h3><p>Choose the apps you want out of reach and save them as a profile.</p></div><div class="phone"><img src="assets/app-03.webp" width="540" height="1170" alt="Offtap profile screen listing six chosen apps with an Edit apps button." loading="lazy" decoding="async"></div></li>
+<li class="step"><span class="n" aria-hidden="true"></span><div class="copy"><h3>Pair a tag</h3><p>Hold an NFC sticker to your phone, or make a QR code you can print.</p></div><div class="phone"><img src="assets/app-04.webp" width="540" height="1170" alt="Offtap pairing screen asking you to hold your sticker to the phone." loading="lazy" decoding="async"></div></li>
+<li class="step"><span class="n" aria-hidden="true"></span><div class="copy"><h3>Start a session</h3><p>Open a chosen app and Offtap covers it with a calm block screen.</p></div><div class="phone"><img src="assets/app-02.webp" width="540" height="1170" alt="Offtap block screen on a deep indigo background with a glowing ring and the line Walk to Fridge to unbrick." loading="lazy" decoding="async"></div></li>
+<li class="step"><span class="n" aria-hidden="true"></span><div class="copy"><h3>Tap to unlock</h3><p>Leave the tag in another room. Tap it, or scan your code, and your apps come back.</p></div><div class="phone"><img src="assets/app-01.webp" width="540" height="1170" alt="The moment of unlocking: a cream circle grows over the indigo block screen." loading="lazy" decoding="async"></div></li>
 </ol>
 
-<h2>What you get</h2>
-<ul>
-<li>Profiles of apps, with a timed option when you want a session to end by itself.</li>
-<li>A way out that is always there: an emergency unlock after a short wait, and a longer wait when you have used your monthly unlocks.</li>
-<li>A warning when Android stops blocking, with one tap to turn it back on.</li>
-<li>Locking and unlocking never sit behind a paywall.</li>
-</ul>
+<div class="qr-note" id="no-sticker">
+<span class="ico" aria-hidden="true"><svg viewBox="0 0 64 64"><g fill="currentColor"><path fill-rule="evenodd" d="M6 6h20v20H6zM12 12v8h8v-8zM38 6h20v20H38zM44 12v8h8v-8zM6 38h20v20H6zM12 44v8h8v-8z"/><path d="M15 15h2v2h-2zM47 15h2v2h-2zM15 47h2v2h-2zM38 38h6v6h-6zM48 38h4v4h-4zM54 44h4v6h-4zM38 50h4v8h-4zM46 48h6v4h-6zM46 54h4v4h-4zM56 54h2v4h-2z"/></g></svg></span>
+<div>
+<h3>No sticker yet?</h3>
+<p>Offtap can make a printable QR code to use instead of a sticker, or alongside one. It works on any phone with a camera. A code is easier to get around than a sticker, and the app says so.</p>
+</div>
+</div>
+</div>
+</section>
 
-<h2>Honest limits</h2>
-<div class="card">
-<p>Offtap adds friction. It is not a lock you cannot undo, and you can uninstall it at any time.</p>
-<ul>
-<li>It blocks opening apps. It does not block websites or notifications.</li>
-<li>A printed QR code is easier to get around than a sticker: anyone with a photo of it can unlock.</li>
-<li>Android or your phone maker can stop background apps. If that happens, Offtap tells you.</li>
-<li>Offtap is a productivity tool, not a medical product. Do not rely on it for anything urgent.</li>
+<section class="banded" id="way-out" aria-labelledby="out-h">
+<div class="wrap">
+<div class="section-head"><span class="eyebrow">Always a way out</span><h2 id="out-h">You are never stuck behind it.</h2><p>Lose the tag, change your mind or just want it gone: every session has an exit that does not need the tag.</p></div>
+<ul class="grid four" role="list">
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-unlock"/></svg></span><h3>Emergency unlock</h3><p>After a short wait, or by typing a sentence, you can unlock yourself a few times a month.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg></span><h3>A 60 minute wait</h3><p>When those are used up, you can still wait 60 minutes and your apps come back.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-trash"/></svg></span><h3>Uninstall any time</h3><p>Offtap is not a lock you cannot undo. Remove it whenever you like.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Never behind a purchase</h3><p>Locking and unlocking never depend on buying anything.</p></li>
 </ul>
 </div>
+</section>
 
-<h2>Your data</h2>
-<p>Offtap has no account and no servers, and it never uploads the apps you block. There are no ads and no analytics. Read the <a href="privacy/">privacy policy</a> for exactly what is stored on your phone and why each permission is needed.</p>
+<section id="private" aria-labelledby="priv-h">
+<div class="wrap">
+<div class="section-head"><span class="eyebrow">Private by design</span><h2 id="priv-h">Nothing leaves your phone.</h2><p>Offtap has no account system and no server. The list of apps you block stays on your device.</p></div>
+<ul class="grid three" role="list">
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-user"/></svg></span><h3>No account</h3><p>No sign-up and no login. Install it and go.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ads"/></svg></span><h3>No ads</h3><p>Nothing to watch, nothing to dismiss.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg></span><h3>No analytics</h3><p>No analytics and no crash-reporting service in the app.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg></span><h3>Stays on your phone</h3><p>The apps you block and your sessions are stored only on this device.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3>No internet permission</h3><p>Offtap has no permission to use the internet, so it cannot send anything out.</p></li>
+<li class="tile-card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cloud"/></svg></span><h3>Cloud backup off</h3><p>Android cloud backup is turned off for Offtap, so nothing is copied to your Google account.</p></li>
+</ul>
+<p style="margin-top:1.5rem">Read the <a href="privacy/">privacy policy</a> for exactly what is stored and why each permission is needed.</p>
+</div>
+</section>
 
-<h2>Requirements</h2>
-<p>Android 8.0 or newer, and either an NFC sticker (NTAG213, NTAG215 or NTAG216) on a phone with NFC, or a camera to scan a printed code. Offtap is for people aged 18 and over.</p>
+<section class="banded" id="gallery" aria-labelledby="gal-h">
+<div class="wrap">
+<div class="section-head"><span class="eyebrow">A look inside</span><h2 id="gal-h">Calm on purpose.</h2><p class="hint">Swipe sideways to see more.</p></div>
+<div class="gallery-wrap">
+<ul class="gallery" role="list" tabindex="0" aria-label="Offtap screenshots, scroll sideways to see more">
+<li><figure><div class="phone"><img src="assets/app-02.webp" width="540" height="1170" alt="Offtap block screen with a ring, the time passed and the name of the tag to find." loading="lazy" decoding="async"></div><figcaption>The block screen</figcaption></figure></li>
+<li><figure><div class="phone"><img src="assets/app-07.webp" width="540" height="1170" alt="Offtap home screen during a session with the time passed and the tag to tap." loading="lazy" decoding="async"></div><figcaption>Home, during a session</figcaption></figure></li>
+<li><figure><div class="phone"><img src="assets/app-06.webp" width="540" height="1170" alt="Offtap sheet offering Until I tap, 30 min, 1 h, 2 h or 4 h." loading="lazy" decoding="async"></div><figcaption>Timed sessions</figcaption></figure></li>
+<li><figure><div class="phone"><img src="assets/app-05.webp" width="540" height="1170" alt="Offtap home screen with a notice that blocking is paused and a button to turn on Usage access." loading="lazy" decoding="async"></div><figcaption>It tells you if blocking stops</figcaption></figure></li>
+<li><figure><div class="phone"><img src="assets/app-08.webp" width="540" height="1170" alt="Offtap screen for naming a printed code, with Fridge, Desk and Hallway suggestions." loading="lazy" decoding="async"></div><figcaption>Name your tag or code</figcaption></figure></li>
+<li><figure><div class="phone"><img src="assets/app-03.webp" width="540" height="1170" alt="Offtap profile named Focus listing chosen apps." loading="lazy" decoding="async"></div><figcaption>Profiles of apps</figcaption></figure></li>
+</ul>
+</div>
+</div>
+</section>
 
-<h2>Contact</h2>
-<p>Questions or problems: <a href="mailto:yogirana5557@gmail.com">yogirana5557@gmail.com</a></p>
+<section id="limits" aria-labelledby="lim-h">
+<div class="wrap">
+<div class="limits">
+<div><span class="eyebrow">Honest limits</span><h2 id="lim-h">Friction, not a lock.</h2><p style="color:var(--muted);margin-top:1rem">Offtap adds friction. It is not a lock you cannot undo, and it says so up front.</p></div>
+<ul role="list">
+<li><span><strong>It blocks opening apps.</strong> It does not block websites or notifications.</span></li>
+<li><span><strong>A printed code is easier to get around than a sticker.</strong> Anyone with a photo of it can unlock.</span></li>
+<li><span><strong>Android or your phone maker can stop background apps.</strong> If that happens, Offtap tells you.</span></li>
+<li><span><strong>On some phones (OnePlus, Oppo, Realme)</strong> an Offtap update or a restart can pause blocking until you open Offtap, unless you set Offtap to &ldquo;Don&rsquo;t optimise&rdquo; in the phone&rsquo;s battery settings. Offtap shows you that setting when you first set up.</span></li>
+<li><span><strong>Offtap is a productivity tool,</strong> not a medical product. Do not rely on it for anything urgent.</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="banded" id="faq" aria-labelledby="faq-h">
+<div class="wrap">
+<div class="section-head"><span class="eyebrow">FAQ</span><h2 id="faq-h">Questions, answered plainly.</h2></div>
+<div class="faq">
+<details><summary>Does it need an NFC tag?</summary><div class="ans"><p>No. Offtap works with an NFC sticker (NTAG213, NTAG215 or NTAG216) on a phone with NFC, or with a QR code you print and scan with the camera. A printed code is easier to get around than a sticker, and the app says so.</p></div></details>
+<details><summary>What if I lose the tag?</summary><div class="ans"><p>An emergency unlock is available after a short wait or by typing a sentence, a few times a month. When those are used up, you can still wait 60 minutes. You can also uninstall Offtap at any time.</p></div></details>
+<details><summary>Does it work without internet?</summary><div class="ans"><p>Yes. Everything happens on your phone, and Offtap has no permission to use the internet.</p></div></details>
+<details><summary>What permissions does it ask, and why?</summary><div class="ans"><p>Usage access, to see which app is open while a session runs. Display over other apps, to show the block screen. Notifications, for a quiet session notice and a warning if Android stops blocking. Each one is explained in the app before Android asks, and you can decline. NFC and camera are optional. The <a href="privacy/#permissions">privacy policy</a> lists every permission.</p></div></details>
+<details><summary>Is it free?</summary><div class="ans"><p>Free to use; optional Pro adds extras. Google Play shows details.</p></div></details>
+<details><summary>Which phones does it work on?</summary><div class="ans"><p>Android 8.0 or newer. You need either a phone with NFC and a sticker, or a camera to scan a printed code.</p></div></details>
+<details><summary>Who is it for?</summary><div class="ans"><p>Offtap is intended for people aged 18 and over.</p></div></details>
+</div>
+</div>
+</section>
+
+<section class="night final" aria-labelledby="cta-h">
+<div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+<img class="mark" src="assets/mark-dark.svg" width="57" height="55" alt="" loading="lazy">
+<h2 id="cta-h">Put your phone down. Go and tap it back.</h2>
+<p>No account, no ads, nothing leaves your phone.</p>
+<div class="cta-row"><a class="btn btn-cream" href="https://play.google.com/store/apps/details?id=app.offtap"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></svg>Get it on Google Play</a></div>
+<p class="fine">Android 8.0 or newer. For people aged 18 and over.</p>
+</div>
+</section>
+
 </main>
-<footer>
-<a href="./">Home</a><a href="privacy/">Privacy policy</a><a href="mailto:yogirana5557@gmail.com">Contact</a>
-</footer>
+<footer class="site-footer"><div class="wrap">
+<div>
+<p>&copy; 2026 Offtap</p>
+<p>Offtap is an Android app; Google Play is a trademark of Google LLC.</p>
 </div>
+<ul class="foot-links">
+<li><a href="./">Home</a></li>
+<li><a href="privacy/">Privacy policy</a></li>
+<li><a href="mailto:yogirana5557@gmail.com">Support: yogirana5557@gmail.com</a></li>
+</ul>
+</div></footer>
 </body>
 </html>
