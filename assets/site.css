@@ -212,3 +212,5 @@ summary:hover{background:var(--sunk)}
 .nf .code{font-size:.875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 @media print{.site-header,.skip,.stage,.gallery-wrap{display:none}body{background:#fff;color:#000}}
+
+.btn .play-ico{width:1.2rem;height:1.2rem;flex:none}
